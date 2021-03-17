@@ -4,17 +4,6 @@
 // 1. printIndices
 function printIndices(items) {
   
-  // The output should look like this:
-  //     apple 0
-  //     berry 1
-  //     cherry 2
-
-  // Arguments:
-  //     items (list)
-
-  // Returns:
-  //     None
-
   for (const idx in items){
     console.log(items[idx], idx);
   }
@@ -22,7 +11,7 @@ function printIndices(items) {
 
 
 // 2. everyOtherItem
-function everyOtherItem(items = ['dog', 'cat', 'pig', 'horse', 'sheep', 'rabbit', 'emu']) {
+function everyOtherItem(items) {
   
   let result = []
   
@@ -36,6 +25,9 @@ function everyOtherItem(items = ['dog', 'cat', 'pig', 'horse', 'sheep', 'rabbit'
 
 
 // 3. smallestNItems
-function smallestNItems(items, n) {
-  // Replace this with your code
+function smallestNItems(items, n) { //a function that takes a list of numbers and another number
+  const sorted_n_items = items.sort((a, b) => a-b).slice(0, n); //sorts the items from lowest to highest, and returns only items 1-n
+  sorted_n_items.reverse(); //reverses the order of the items
+
+  console.log(sorted_n_items); //prints the list
 }
